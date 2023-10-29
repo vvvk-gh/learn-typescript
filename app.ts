@@ -1,18 +1,16 @@
-enum Role { ADMIN, COMMENTER, AUTHOR };
-//default values is 0,1,2 and so..on
-
-//enum Role { ADMIN=5, COMMENTER, AUTHOR };
-// the next 2 will have consecutive number
-
-//enum Role { ADMIN= 'ADMIN', COMMENTER=300, AUTHOR=700 };
-//u can also have mixed type of values 
-const user = {
-    name: 'Karna',
-    age: 26,
-    hobbies: ['movies', 'volleyball'],
-    role: Role.ADMIN
+function combinable(input1: number | string, input2: number | string) {
+    let result;
+    if (typeof input1 === "number" && typeof input2 === 'number') {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 }
 
-if (user.role == Role.ADMIN) {
-    console.log(user.name);    
-}
+
+console.log(combinable(3, 2));
+
+console.log(combinable('3', '2'));
+
+console.log(combinable('Hello', 'world'));

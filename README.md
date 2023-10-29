@@ -108,3 +108,25 @@ role: Role.ADMIN
 if (user.role = Role.ADMIN) {
 console.log(user.name);  
 }
+
+#### union data type
+
+> Union datatype allows more than one type of data as parameters
+
+```
+function combinable(input1: number | string, input2: number | string) {
+let result;
+if (typeof input1 === "number" && typeof input2 === 'number') {
+result = input1 + input2;
+} else {
+result = input1.toString() + input2.toString();
+}
+return result;
+}
+
+console.log(combinable(3, 2));
+console.log(combinable('3', '2'));
+console.log(combinable('Hello', 'world'));
+```
+
+#### literal data type
