@@ -39,3 +39,16 @@ restricting its access non-existing properties or assiging another types will le
 > user.age = 'twenty four'; //shows erros
 
 #### Array
+
+> const user = {
+> name: 'vamsi',
+> age: 26,
+> hobbies: ['movies', 'volleyball']
+> }
+
+const newHobbies : string[];
+newHobbies = ['sports', 1] //shows an error
+
+const newHobbies: any = ['sports', 1] // allows at the cost of losing all TS benefits
+
+> `any` is a new special type in TS.

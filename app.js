@@ -1,14 +1,12 @@
-function add(num1, num2, showResult, showPharse) {
-    var result = num1 + num2;
-    if (showResult) {
-        console.log(showPharse + result);
-    }
-    else {
-        return result;
-    }
+var user = {
+    name: 'vamsi',
+    age: 26,
+    hobbies: ['movies', 'volleyball']
+};
+console.log(user.name);
+for (var _i = 0, _a = user.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby);
+    console.log(hobby.toUpperCase()); //suggests all string functions at IDE as it already knows its a string
+    console.log(hobby.map()); //results in a error as map doesnt work on string
 }
-var n1 = 6;
-var n2 = 3.9;
-var printResult = true;
-var pharse = 'The sum is :';
-add(n1, n2, printResult, pharse);

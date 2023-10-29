@@ -1,15 +1,16 @@
-function add(num1: number, num2: number, showResult: boolean, showPharse: string) {
-    const result = num1 + num2;
-    if (showResult) {
-        console.log(showPharse + result);
-    } else {
-        return result;
-    }
+const user = {
+    name: 'vamsi',
+    age: 26,
+    hobbies: ['movies', 'volleyball']
 }
 
-const n1 = 6;
-const n2 = 3.9;
-const printResult = true;
-const pharse = 'The sum is :';
+console.log(user.name);
 
-add(n1, n2, printResult, pharse);
+for (const hobby of user.hobbies) {
+    console.log(hobby);
+    console.log(hobby.toUpperCase()); //suggests all string functions at IDE as it already knows its a string
+   // console.log(hobby.map()) //results in a error as map doesnt work on string
+}
+
+//const newHobbies : string[] = ['sports', 1] //shows an error
+const newHobbies: any = ['sports', 1] // allows at the cost of losing all TS benefits
