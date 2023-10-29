@@ -1,7 +1,10 @@
-function combinable (
-    input1: number | string,
-    input2: number | string,
-    returnOutput: 'as-number' | 'as-string' //liternal data types
+type Combine = number | string;
+type Outputconverter = 'as-number' | 'as-string'
+
+function combinable(
+    input1: Combine,
+    input2: Combine,
+    returnOutput: Outputconverter
 ) {
     let result;
     if (typeof input1 === "number" && typeof input2 === 'number' || returnOutput === 'as-number') {
@@ -12,9 +15,6 @@ function combinable (
     return result;
 }
 
-//adding a third argument which specifies the output of the result
-//console.log(combinable(3, 2, 'as-number'));
-
+console.log(combinable(3, 2, 'as-number'));
 console.log(combinable('3', '2', 'as-number'));
-
-//console.log(combinable('Hello', 'world', 'as-string'));
+console.log(combinable('Hello', 'world', 'as-string'));
