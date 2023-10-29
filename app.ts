@@ -1,12 +1,15 @@
-function add(num1: number, num2: number) {
-    console.log(num1+num2);
+function add(num1: number, num2: number, showResult: boolean, showPharse: string) {
+    const result = num1 + num2;
+    if (showResult) {
+        console.log(showPharse + result);
+    } else {
+        return result;
+    }
 }
-
-
-//const n1 = '6'; 
-//Uncommet this to understand the error
-//shows you the lint error as you specified the date type at the function parameters
 
 const n1 = 6;
 const n2 = 3.9;
-add(n1, n2);
+const printResult = true;
+const pharse = 'The sum is :';
+
+add(n1, n2, printResult, pharse);
