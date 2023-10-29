@@ -1,25 +1,18 @@
-const user : {
-    name: string;
-    age: number;
-    hobbies: string[];
-    role:[number, string];
-    } = {
-    name: 'vamsi',
+enum Role { ADMIN, COMMENTER, AUTHOR };
+//default values is 0,1,2 and so..on
+
+//enum Role { ADMIN=5, COMMENTER, AUTHOR };
+// the next 2 will have consecutive number
+
+//enum Role { ADMIN= 'ADMIN', COMMENTER=300, AUTHOR=700 };
+//u can also have mixed type of values 
+const user = {
+    name: 'Karna',
     age: 26,
     hobbies: ['movies', 'volleyball'],
-    role: [2, 'author']
+    role: Role.ADMIN
 }
 
-//user.role[1] = 3; //shows an error;
-//user.role.description //shows an error
-
-console.log(user.name);
-
-for (const hobby of user.hobbies) {
-    console.log(hobby);
-    //console.log(hobby.toUpperCase()); //suggests all string functions at IDE as it already knows its a string
-   // console.log(hobby.map()) //results in a error as map doesnt work on string
+if (user.role == Role.ADMIN) {
+    console.log(user.name);    
 }
-
-//const newHobbies : string[] = ['sports', 1] //shows an error
-const newHobbies: any = ['sports', 1] // allows at the cost of losing all TS benefits

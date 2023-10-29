@@ -83,3 +83,28 @@ now this wont allow the following
 
 user.role[1] = 3; //shows an error;
 user.role.description //shows an error
+
+#### ENUM
+
+enum Role { ADMIN, COMMENTER, AUTHOR };
+//default values is 0,1,2 and so..on
+
+the next 2 will have consecutive number
+enum Role { ADMIN=5, COMMENTER, AUTHOR };
+
+u can also have mixed type of values
+enum Role { ADMIN= 'ADMIN', COMMENTER=300, AUTHOR=700 };
+
+const user = {
+name: 'vamsi',
+age: 26,
+hobbies: ['movies', 'volleyball'],
+role: Role.ADMIN
+}
+
+//user.role[1] = 3; //shows an error;
+//user.role.description //shows an error
+
+if (user.role = Role.ADMIN) {
+console.log(user.name);  
+}

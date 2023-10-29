@@ -1,14 +1,21 @@
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["COMMENTER"] = 1] = "COMMENTER";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
+;
+//default values is 0,1,2 and so..on
+//enum Role { ADMIN=5, COMMENTER, AUTHOR };
+// the next 2 will have consecutive number
+//enum Role { ADMIN= 'ADMIN', COMMENTER=300, AUTHOR=700 };
+//u can also have mixed type of values 
 var user = {
-    name: 'vamsi',
+    name: 'Karna',
     age: 26,
-    hobbies: ['movies', 'volleyball']
+    hobbies: ['movies', 'volleyball'],
+    role: Role.ADMIN
 };
-console.log(user.name);
-for (var _i = 0, _a = user.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby);
-    //console.log(hobby.toUpperCase()); //suggests all string functions at IDE as it already knows its a string
-    // console.log(hobby.map()) //results in a error as map doesnt work on string
+if (user.role == Role.ADMIN) {
+    console.log(user.name);
 }
-//const newHobbies : string[] = ['sports', 1] //shows an error
-var newHobbies = ['sports', 1]; // allows at the cost of losing all TS benefits
