@@ -1,6 +1,6 @@
-function addAndHandle(n1:number, n2:number, cb:(a: number)=> void){
-    const result = n1 + n2;
-    cb(result);
+function genError(message: string, code: number) : never
+{
+    throw {message : message , errorcode: code};
 }
 
-addAndHandle(9, 9, (result)=>{ console.log(result)})
+genError('404 page not found error', 400);

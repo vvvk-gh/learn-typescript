@@ -1,5 +1,4 @@
-function addAndHandle(n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
+function genError(message, code) {
+    throw { message: message, errorcode: code };
 }
-addAndHandle(9, 9, function (result) { console.log(result); });
+genError('404 page not found error', 400);

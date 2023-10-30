@@ -1,16 +1,15 @@
 CMD TO compile Typescript files
 
-- tsc <filename.ts>
+```
+ - tsc <filename.ts>
+
+```
 
 devlopment only package
 
+```
 npm install --save-dev <npm-package-name>
-
-core types in ts
-
-numbers
-string
-boolean
+```
 
 Types in TS helps us from runtime errors.
 as types in TS gives raise before hand at compliation only
@@ -21,20 +20,29 @@ We can explicitly declare the type of a varible like below
 
 #### Object
 
-> const user = {
-> name : 'Karna',
-> age : 23
-> }
-> this will instruct the type of object like the following to the TS compiler
-
+```
 const user = {
-name: string;
-age: number;
+    name : 'Karna',
+    age : 23
 }
+
+```
+
+this will instruct the type of object like the following to the TS compiler
+
+```
+const user = {
+    name: string;
+    age: number;
+}
+```
 
 restricting its access non-existing properties or assiging another types will leads to an error
 
-> console.log(user.nickname) //leads to a compliation error
+```
+console.log(user.nickname)
+//leads to a compliation error
+```
 
 > user.age = 'twenty four'; //shows erros
 
@@ -215,9 +223,22 @@ combineValues(9, 9);
 
 ```
 function addAndHandle(n1:number, n2:number, cb:(a: number)=> void){
-    const result = n1 + n2;
+    const result = n1 + n2;z
     console.log(result);
 }
 
 addAndHandle(9, 9, (result)=>{ console.log(result)})
+```
+
+#### never data type
+
+> The follow code never returns any thing as the script breaks once the error thrown at runtime
+
+```
+function genError(code: number, message: string) : never
+{
+    throw {message : message , errorcode: code};
+}
+
+genError('404 page not found error', 400);
 ```
