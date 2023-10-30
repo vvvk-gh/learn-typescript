@@ -210,3 +210,14 @@ let combineValues: (a: number, b: number) => number;
 combineValues = sum;
 combineValues(9, 9);
 ```
+
+#### Callbacks Type
+
+```
+function addAndHandle(n1:number, n2:number, cb:(a: number)=> void){
+    const result = n1 + n2;
+    console.log(result);
+}
+
+addAndHandle(9, 9, (result)=>{ console.log(result)})
+```
