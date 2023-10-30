@@ -4,12 +4,12 @@
   "description": "CMD TO compile Typescript files",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "2.6.1"
+    "lite-server": "2.6.1",
+    "typescript": "^5.2.2"
   }
 }
