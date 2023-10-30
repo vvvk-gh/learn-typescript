@@ -44,20 +44,30 @@ console.log(user.nickname)
 //leads to a compliation error
 ```
 
-> user.age = 'twenty four'; //shows erros
+```
+user.age = 'twenty four';
+//shows erros
+```
 
 #### Array
 
-> const user = {
-> name: 'vamsi',
-> age: 26,
-> hobbies: ['movies', 'volleyball']
-> }
+```
+const user = {
+    name: 'vamsi',
+    age: 26,
+    hobbies: ['movies', 'volleyball']
+}
+```
 
+```
 const newHobbies : string[];
-newHobbies = ['sports', 1] //shows an error
+//shows an error
+newHobbies = ['sports', 1]
 
-const newHobbies: any = ['sports', 1] // allows at the cost of losing all TS benefits
+// allows at the cost of losing all TS benefits
+const newHobbies: any = ['sports', 1]
+s
+```
 
 > `any` is a new special type in TS.
 
@@ -66,15 +76,18 @@ const newHobbies: any = ['sports', 1] // allows at the cost of losing all TS ben
 tuples are the shorter form of array with only 2 values
 its a union data type
 
+```
 const user {
-name :'Harry'
-age : 24,
-hobbies : ['vlog','video-game'],
-role:[2,'author']; //this is a tuple
+    name :'Harry'
+    age : 24,
+    hobbies : ['vlog','video-game'],
+    role:[2,'author']; //this is a tuple
 }
+```
 
 but the TS will understand this as an array and will allow Array functions to it inorder to avoid we need to specify
 
+```
 const user : {
 name: string;
 age: number;
@@ -86,14 +99,19 @@ age: 26,
 hobbies: ['movies', 'volleyball'],
 role: [2, 'author']
 }
+```
 
 now this wont allow the following
 
-user.role[1] = 3; //shows an error;
-user.role.description //shows an error
+```
+//following gives error
+user.role[1] = 3;
+user.role.description
+```
 
 #### ENUM
 
+```
 enum Role { ADMIN, COMMENTER, AUTHOR };
 //default values is 0,1,2 and so..on
 
@@ -114,10 +132,11 @@ role: Role.ADMIN
 //user.role.description //shows an error
 
 if (user.role = Role.ADMIN) {
-console.log(user.name);  
+console.log(user.name);
 }
+```
 
-#### union data type
+#### Union data type
 
 > Union datatype allows more than one type of data as parameters
 
@@ -230,7 +249,7 @@ function addAndHandle(n1:number, n2:number, cb:(a: number)=> void){
 addAndHandle(9, 9, (result)=>{ console.log(result)})
 ```
 
-#### never data type
+#### never data typeg
 
 > The follow code never returns any thing as the script breaks once the error thrown at runtime
 
